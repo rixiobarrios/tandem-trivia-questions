@@ -6,7 +6,7 @@ Apprentice Software Engineer October 2020
 
 ## Documentation
 
-Find original documentation from Tandem among the files for this repository under: Tandem_SEApprentice_Challenge_2020.pdf
+Find original documentation from Tandem among the files for this repository, under the name: Tandem_SEApprentice_Challenge_2020.pdf
 
 ## Overview
 
@@ -31,3 +31,7 @@ The goal is to create an application that displays trivia questions with multipl
 # Preview 4
 
 <img width="991" alt="Preview 4" src="https://user-images.githubusercontent.com/55994508/97510627-247bb880-1953-11eb-9c4a-e7ada9430d3e.png">
+
+# Preview 5
+
+<img width="906" alt="Preview 5" src="https://user-images.githubusercontent.com/55994508/97519670-9b22b100-1967-11eb-8ce3-65ceba4cbf19.png">
