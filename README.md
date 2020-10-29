@@ -1,6 +1,20 @@
 ![tandem](https://user-images.githubusercontent.com/55994508/97501524-67cc2c00-193f-11eb-9c51-8a5068be6d2c.png)
 
-# tandem-trivia-questions
+# Tandem Code Challenge
+
+Apprentice Software Engineer October 2020
+
+## Documentation
+
+Find original documentation from Tandem among the files for this repository under: Tandem_SEApprentice_Challenge_2020.pdf
+
+## Overview
+
+This is a project built in response to a code challenge provided by [Tandem Chicago](https://madeintandem.com/)
+
+## Goal
+
+The goal is to create an application that displays trivia questions with multiple-choice answers to select from.
 
 # Preview 1
 
@@ -9,7 +23,6 @@
 # Preview 2
 
 <img width="1051" alt="preview 2" src="https://user-images.githubusercontent.com/55994508/97504821-af55b680-1945-11eb-86ff-9003ab1073e1.png">
-
 
 # Preview 3
 
