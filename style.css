@@ -1,0 +1,70 @@
+*, *::before, *::after {
+    box-sizing:border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 5px 5px 0 black;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: white;
+    border: 2px solid black;
+    padding: 15px;
+    font-size: 20px;
+    color: black;
+    box-shadow: 5px 5px 0 black;
+}
+
+.btn:hover {
+    box-shadow: 2px 2px 0 black;
+}
+
+.btn-correct {
+    --hue: var(--hue-correct);
+}
+
+.btn-wrong {
+    --hue: var(--hue-wrong);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-btn, .next-btn {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+
+.hide {
+    display: none;
+}
+
+
