@@ -1,6 +1,7 @@
 ![tandem](https://user-images.githubusercontent.com/55994508/97501524-67cc2c00-193f-11eb-9c51-8a5068be6d2c.png)
 
 # Tandem Code Challenge
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4b2a778c-724e-438b-b678-4960dd97ffc0/deploy-status)](https://app.netlify.com/sites/tandem-trivia-questions/deploys)
 
 Apprentice Software Engineer October 2020
 
@@ -35,3 +36,14 @@ The goal is to create an application that displays trivia questions with multipl
 # Preview 5
 
 <img width="906" alt="Preview 5" src="https://user-images.githubusercontent.com/55994508/97519670-9b22b100-1967-11eb-8ce3-65ceba4cbf19.png">
+
+# Preview 6
+
+<img width="1021" alt="Preview 6" src="https://user-images.githubusercontent.com/55994508/97819269-0f619b00-1c6d-11eb-9d45-d6828458a691.png">
+
+Attributions:
+
+- [sitepoint.com](https://www.sitepoint.com/simple-javascript-quiz/)
+- [w3schools.com](https://www.w3schools.com/tags/ev_onclick.asp)
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [Stack Overflow](https://stackoverflow.com/questions/26937424/change-button-color-onclick)

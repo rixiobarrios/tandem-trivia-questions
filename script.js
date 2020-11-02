@@ -25,8 +25,9 @@ let questions = [];
 fetch('Apprentice_TandemFor400_Data.json')
     .then((res) => res.json())
     .then((loadedQuestions) => {
-        questions = [...loadedQuestions]; // create copy here
-        console.log('Questions loaded!', questions[0].incorrect);
+        questions = [...loadedQuestions]; // create copy here using spread operator
+        console.log('Questions loaded!', questions[1].incorrect);
+        console.log('Correct answer loaded!', questions[1].correct)
     })
     .catch((err) => console.dir(err)); // error catching
 
@@ -45,20 +46,23 @@ function nextQuestion() {
 }
 
 function showQuestion(question) {
-    questionElement.innerText = question.question;
+    questionElement.innerText = question.question; // show question
+    // loop through answers array
     question.incorrect.forEach((answer) => {
-        // loop through answers array
-        const button = document.createElement('button'); // create element
+        const button = document.createElement('button'); // create element/buttons for choices
         button.innerText = answer;
-        button.classList.add('btn'); // target button class
-        if (answer.correct) {
+        button.classList.add('btn'); // target button class to add
+        if (answer.incorrect) {
             // conditional statement for logic
-            button.dataset.correct = answer.correct;
+            button.dataset.incorrect = answer.incorrect;
         }
-        button.addEventListener('click', selectAnswer); // event listener for correct answer
-        answerButtonsElement.appendChild(button); // adding answers/creating buttons
+        button.addEventListener('click', selectAnswer); // event listener for answer
+        answerButtonsElement.appendChild(button); // adding answers/creating buttons in DOM
+        
     });
 }
+
+// next will show correct answer and add colors to the buttons and a score board
 
 function resetState() {
     nextButton.classList.add('hide'); // hide next button
@@ -93,7 +97,7 @@ function setStatusClass(element, correct) {
         // conditional for correct and incorrect answers for DOM
         element.classList.add('correct');
     } else {
-        element.classList.add('wrong');
+        element.classList.add('incorrect');
     }
 }
 
@@ -101,24 +105,6 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     // remove classes after answer was given
     element.classList.remove('correct');
-    element.classList.remove('wrong');
+    element.classList.remove('incorrect');
 }
 
-// const questions = [
-//     {
-//       question: "What is your favorite color?", // test question
-//       answers: [
-//           {text: 'black', correct: true},
-//           {text: 'white', correct: false}
-//       ]
-//     }
-// ]
-
-// test to fetch json data
-// const questions = 'Apprentice_TandemFor400_Data.json';
-// async function getData() {
-//     const response = await fetch(questions);
-//     const data = await response.json();
-//     console.log(data);
-// }
-// getData();
