@@ -18,14 +18,27 @@ nextButton.addEventListener('click', () => {
     nextQuestion();
 });
 
+//create an empty array for loadedQuestions copy
+let questions = [];
+
+// fetch application data
+fetch('Apprentice_TandemFor400_Data.json')
+    .then((res) => res.json())
+    .then((loadedQuestions) => {
+        questions = [...loadedQuestions]; // create copy here
+        console.log('Questions loaded!', questions[0].incorrect);
+    })
+    .catch((err) => console.dir(err)); // error catching
+
 function startGame() {
     startButton.classList.add('hide'); // hides button after pressing start
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5); // arrow function to shuffle the questions
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5); // arrow function to shuffle questions
     currentQuestionIndex = 0; // stars question's array from index 0
     questionContainerElement.classList.remove('hide'); // shows questions after start button is pressed
     nextQuestion(); // sets next question
 }
 
+// move to next question
 function nextQuestion() {
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
@@ -33,10 +46,10 @@ function nextQuestion() {
 
 function showQuestion(question) {
     questionElement.innerText = question.question;
-    question.answers.forEach((answer) => {
+    question.incorrect.forEach((answer) => {
         // loop through answers array
         const button = document.createElement('button'); // create element
-        button.innerText = answer.text;
+        button.innerText = answer;
         button.classList.add('btn'); // target button class
         if (answer.correct) {
             // conditional statement for logic
@@ -55,6 +68,7 @@ function resetState() {
     }
 }
 
+// selected answer actions
 function selectAnswer(e) {
     const selectedButton = e.target; // target selected button
     const correct = selectedButton.dataset.correct;
@@ -71,17 +85,19 @@ function selectAnswer(e) {
     }
 }
 
+// set question status
 function setStatusClass(element, correct) {
     // feedback from answer chosen
     clearStatusClass(element); // clear previous status
     if (correct) {
-        // conditional for correct and incorrect answers
+        // conditional for correct and incorrect answers for DOM
         element.classList.add('correct');
     } else {
         element.classList.add('wrong');
     }
 }
 
+// clear question status
 function clearStatusClass(element) {
     // remove classes after answer was given
     element.classList.remove('correct');
@@ -99,10 +115,10 @@ function clearStatusClass(element) {
 // ]
 
 // test to fetch json data
-const questions = 'Apprentice_TandemFor400_Data.json';
-async function getData() {
-    const response = await fetch(questions);
-    const data = await response.json();
-    console.log(data);
-}
-getData();
+// const questions = 'Apprentice_TandemFor400_Data.json';
+// async function getData() {
+//     const response = await fetch(questions);
+//     const data = await response.json();
+//     console.log(data);
+// }
+// getData();
