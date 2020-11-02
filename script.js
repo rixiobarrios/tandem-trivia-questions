@@ -20,20 +20,26 @@ nextButton.addEventListener('click', () => {
 
 //create an empty array for loadedQuestions copy
 let questions = [];
+// let correctAnswers = [];
 
 // fetch application data
 fetch('Apprentice_TandemFor400_Data.json')
     .then((res) => res.json())
     .then((loadedQuestions) => {
         questions = [...loadedQuestions]; // create copy here using spread operator
+        correctAnswers = [questions.correct]
+        newQuestions = questions.concat(correctAnswers);
         console.log('Questions loaded!', questions[1].incorrect);
+        console.log('All questions loaded', newQuestions)
         console.log('Correct answer loaded!', questions[1].correct)
     })
     .catch((err) => console.dir(err)); // error catching
 
+
+
 function startGame() {
     startButton.classList.add('hide'); // hides button after pressing start
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5); // arrow function to shuffle questions
+    shuffledQuestions = newQuestions.sort(() => Math.random() - 0.5); // arrow function to shuffle questions
     currentQuestionIndex = 0; // stars question's array from index 0
     questionContainerElement.classList.remove('hide'); // shows questions after start button is pressed
     nextQuestion(); // sets next question
@@ -63,6 +69,7 @@ function showQuestion(question) {
 }
 
 // next will show correct answer and add colors to the buttons and a score board
+// limit questions to 10 at a time
 
 function resetState() {
     nextButton.classList.add('hide'); // hide next button
