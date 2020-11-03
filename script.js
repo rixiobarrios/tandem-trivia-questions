@@ -1,17 +1,37 @@
+
+// target welcome message in the Document Object Model(DOM)
+const welcomeElement = document.getElementById('welcome')
+
 // target start button in the Document Object Model(DOM)
 const startButton = document.getElementById('start-btn');
+
 // target next button in the Document Object Model(DOM)
 const nextButton = document.getElementById('next-btn');
+
 // target question buttons in the Document Object Model(DOM)
 const questionContainerElement = document.getElementById('question-container');
+
 // target question in the Document Object Model(DOM)
 const questionElement = document.getElementById('question');
+
 // target answer buttons in the Document Object Model(DOM)
 const answerButtonsElement = document.getElementById('answer-buttons');
+
 // shuffle variable and question index variable
 let shuffledQuestions, currentQuestionIndex;
+
 // event listener for start button
 startButton.addEventListener('click', startGame);
+
+// initial score for player
+let playerScore = 0;
+
+// reset score
+function resetScore() {
+    let playerScore = 0
+    document.getElementById('player-score').innerText = playerScore;
+}
+
 // event listener for next button
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++; // increment currentQuestionIndex to move to the next question
@@ -39,6 +59,7 @@ fetch('Apprentice_TandemFor400_Data.json')
 
 function startGame() {
     startButton.classList.add('hide'); // hides button after pressing start
+    welcomeElement.classList.add('hide'); // hides welcome message after pressing start
     shuffledQuestions = newQuestions.sort(() => Math.random() - 0.5); // arrow function to shuffle questions
     currentQuestionIndex = 0; // stars question's array from index 0
     questionContainerElement.classList.remove('hide'); // shows questions after start button is pressed
@@ -68,7 +89,7 @@ function showQuestion(question) {
     });
 }
 
-// next will show correct answer and add colors to the buttons and a score board
+// next will show correct answer and add colors to the buttons as they are selected
 // limit questions to 10 at a time
 
 function resetState() {

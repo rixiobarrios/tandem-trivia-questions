@@ -19,31 +19,31 @@ This is a project built in response to a code challenge provided by [Tandem Chic
 The goal is to create an application that displays 10 trivia questions pre round with multiple-choice answers to select from. Correct answer turns green, incorrect answer turns red.
 The score board would show the final outcome to the player. Every correct answer is worth one point.
 
-# 1. Building the HTML file
+## 1. Building the HTML file
 
 <img width="500" alt="Preview 1" src="https://user-images.githubusercontent.com/55994508/97503732-964c0600-1943-11eb-9b8b-1f31f9375328.png">
 
-# 2. Building CSS file, stage 1
+## 2. Building CSS file, stage 1
 
 <img width="1051" alt="preview 2" src="https://user-images.githubusercontent.com/55994508/97504821-af55b680-1945-11eb-86ff-9003ab1073e1.png">
 
-# 3. Building the CSS file, stage 2
+## 3. Building the CSS file, stage 2
 
 <img width="968" alt="Preview 3" src="https://user-images.githubusercontent.com/55994508/97510600-129a1580-1953-11eb-974a-f11b98055436.png">
 
-# 4. Building the Javascript logic, stage 1
+## 4. Building the Javascript logic, stage 1
 
 <img width="991" alt="Preview 4" src="https://user-images.githubusercontent.com/55994508/97510627-247bb880-1953-11eb-9c4a-e7ada9430d3e.png">
 
-# 5. Building the Javascript logic, stage 2
+## 5. Building the Javascript logic, stage 2
 
 <img width="906" alt="Preview 5" src="https://user-images.githubusercontent.com/55994508/97519670-9b22b100-1967-11eb-8ce3-65ceba4cbf19.png">
 
-# 6. JSON data loaded into application
+## 6. JSON data loaded into application
 
 <img width="1021" alt="Preview 6" src="https://user-images.githubusercontent.com/55994508/97819269-0f619b00-1c6d-11eb-9d45-d6828458a691.png">
 
-# 7. CSS and Javascript files final stage
+## 7. CSS and Javascript files final stage
 
 <img>
 
