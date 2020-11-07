@@ -16,7 +16,7 @@ This is a project built in response to a code challenge provided by [Tandem Chic
 
 ## Goal
 
-The goal is to create an application that displays 10 trivia questions pre round with multiple-choice answers to select from. Correct answer turns green, incorrect answer turns red.
+The goal is to create an application that displays 10 trivia questions per round with multiple-choice answers to select from. Correct answer turns green, incorrect answer turns red.
 The score board would show the final outcome to the player. Every correct answer is worth one point.
 
 ## 1. Building the HTML file
@@ -43,9 +43,13 @@ The score board would show the final outcome to the player. Every correct answer
 
 <img width="1021" alt="Preview 6" src="https://user-images.githubusercontent.com/55994508/97819269-0f619b00-1c6d-11eb-9d45-d6828458a691.png">
 
-## 7. CSS and Javascript files final stage
+## 7. CSS and Javascript files advance stage
 
-<img>
+<img width="1114" alt="Preview 7" src="https://user-images.githubusercontent.com/55994508/98453284-1b41d700-211d-11eb-8052-72c06b37cd9e.png">
+
+## 8. Javascript logic completed
+
+<img width="1077" alt="Preview 8" src="https://user-images.githubusercontent.com/55994508/98453295-34e31e80-211d-11eb-9740-d5ac605af976.png">
 
 Attributions:
 
@@ -53,3 +57,7 @@ Attributions:
 -   [w3schools.com](https://www.w3schools.com/tags/ev_onclick.asp)
 -   [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 -   [Stack Overflow](https://stackoverflow.com/questions/26937424/change-button-color-onclick)
+
+Special Thanks to:
+
+David Sanvicente, Chris Mendoza and Qusai Fares for their support and guidance
